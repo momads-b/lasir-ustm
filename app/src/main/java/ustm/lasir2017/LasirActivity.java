@@ -32,13 +32,13 @@ public class LasirActivity extends AppCompatActivity {
         /*Componente c = (Casting do componente)findViewById(R.id.<id>);
          Instrução para associar componentes especificos aos seus respectivos IDs
           */
-        tvEmail = (TextView)findViewById(R.id.tvEmail);
+        tvEmail = (TextView) findViewById(R.id.tvEmail);
         etEmail = (EditText) findViewById(R.id.etEmail);
 
-        tvPassword = (TextView)findViewById(R.id.tvPassword);
-        etPassword = (EditText)findViewById(R.id.etPassword);
+        tvPassword = (TextView) findViewById(R.id.tvPassword);
+        etPassword = (EditText) findViewById(R.id.etPassword);
 
-        btOK = (Button)findViewById(R.id.btOK);
+        btOK = (Button) findViewById(R.id.btOK);
 
         email = etEmail.getText().toString();
 
@@ -52,33 +52,39 @@ public class LasirActivity extends AppCompatActivity {
         });
     }
 
-     @Override
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "onPause()", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "onResume()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onResume()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "onStart()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onStart()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Toast.makeText(this, "onRestart()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onRestart()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(this, "onStop()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onStop()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "onDestroy()",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show();
     }
 }
