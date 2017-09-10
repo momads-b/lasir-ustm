@@ -2,6 +2,7 @@
     <string name="app_name">LASIR 2017</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="button_ok">OK</string>
+    <string name="button_ok">LOGIN</string>
     <string name="title_activity_segunda">SegundaActivity</string>
+    <string name="dados_incorrectos">Dados Incorrectos</string>
 </resources>

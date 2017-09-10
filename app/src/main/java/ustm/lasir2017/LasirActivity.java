@@ -1,5 +1,8 @@
 package ustm.lasir2017;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +22,7 @@ public class LasirActivity extends AppCompatActivity {
     Button btOK;
 
     String email;
+    String senha;
 
     /*
     Para a próxima aula investiguem sobre como executar a nossa app no emulador e no dispositivi físico
@@ -40,51 +44,42 @@ public class LasirActivity extends AppCompatActivity {
 
         btOK = (Button) findViewById(R.id.btOK);
 
-        email = etEmail.getText().toString();
-
         btOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                login();
                 Toast.makeText(LasirActivity.this, email, Toast.LENGTH_SHORT).show();
                 //Instrução para mostar de forma simples e rapida o resultado de uma operação
             }
         });
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, "onPause()", Toast.LENGTH_LONG).show();
-    }
+    private void login(){ //Metodo para validar o login e abrin nova janela
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "onResume()", Toast.LENGTH_LONG).show();
-    }
+        email = etEmail.getText().toString();
+        senha = etPassword.getText().toString();
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, "onStart()", Toast.LENGTH_LONG).show();
-    }
+        if(email.equals("teste@teste.com")&&senha.equals("12345")){
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(this, "onRestart()", Toast.LENGTH_LONG).show();
-    }
+            AlertDialog.Builder dialogo = new
+                    AlertDialog.Builder(LasirActivity.this);
+            dialogo.setTitle("Resultado");
+            dialogo.setMessage("O Email " + email + " conscide com a senha");
+            dialogo.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, "onStop()", Toast.LENGTH_LONG).show();
-    }
+                    Intent i = new Intent(LasirActivity.this, SegundaActivity.class); //Intrução para mostrar nova janela a abrir
+                    startActivity(i); //Intrução para abrir nova Janela
+                }
+            });
+            dialogo.show(); //Apresentar o Resultado em Janela modal
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show();
+
+        }else {
+            tvEmail.setError(getResources().getString(R.string.dados_incorrectos));
+            tvPassword.setError(getResources().getString(R.string.dados_incorrectos));
+
+        }
     }
 }
