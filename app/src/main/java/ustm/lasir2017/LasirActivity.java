@@ -48,7 +48,7 @@ public class LasirActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
-                Toast.makeText(LasirActivity.this, email, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LasirActivity.this, email, Toast.LENGTH_SHORT).show();
                 //Instrução para mostar de forma simples e rapida o resultado de uma operação
             }
         });
@@ -69,7 +69,7 @@ public class LasirActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
-                    Intent i = new Intent(LasirActivity.this, SegundaActivity.class); //Intrução para mostrar nova janela a abrir
+                    Intent i = new Intent(LasirActivity.this, MainActivity.class); //Intrução para mostrar nova janela a abrir
                     startActivity(i); //Intrução para abrir nova Janela
                 }
             });
@@ -77,8 +77,8 @@ public class LasirActivity extends AppCompatActivity {
 
 
         }else {
-            tvEmail.setError(getResources().getString(R.string.dados_incorrectos));
-            tvPassword.setError(getResources().getString(R.string.dados_incorrectos));
+            etEmail.setError(getResources().getString(R.string.dados_incorrectos));
+            etPassword.setError(getResources().getString(R.string.dados_incorrectos));
 
         }
     }

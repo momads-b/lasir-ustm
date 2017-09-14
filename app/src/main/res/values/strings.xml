@@ -5,4 +5,6 @@
     <string name="button_ok">LOGIN</string>
     <string name="title_activity_segunda">SegundaActivity</string>
     <string name="dados_incorrectos">Dados Incorrectos</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_radio_button">RadioButtonActivity</string>
 </resources>

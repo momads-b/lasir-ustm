@@ -19,6 +19,14 @@
         <activity
             android:name=".SegundaActivity"
             android:label="@string/title_activity_segunda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RadioButtonActivity"
+            android:label="@string/title_activity_radio_button"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
