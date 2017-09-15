@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ustm.lasir2017.MainActivity"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     android:orientation="vertical"
     tools:showIn="@layout/activity_main">
 
@@ -16,24 +20,24 @@
 
         <Button
             android:id="@+id/checkbox"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CheckBox"/>
         <Button
             android:id="@+id/radiobutton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton"/>
 
         <Button
             android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Spinner"/>
 
         <Button
             android:id="@+id/exercicio"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Exercicio"/>
     </LinearLayout>

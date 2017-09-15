@@ -7,4 +7,14 @@
     <string name="dados_incorrectos">Dados Incorrectos</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_radio_button">RadioButtonActivity</string>
+    <string name="title_activity_spinner">SpinnerActivity</string>
+    <string-array name="opcoes">
+        <item></item>
+        <item>Flash</item>
+        <item>Ironman</item>
+        <item>Batman</item>
+        <item>Superman</item>
+        <item>Supermercado</item>
+    </string-array>
+    <string name="title_activity_exercicio">ExercicioActivity</string>
 </resources>

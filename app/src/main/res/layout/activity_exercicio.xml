@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ustm.lasir2017.CheckboxActivity">
+    tools:context="ustm.lasir2017.Exercicio.ExercicioActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,6 +20,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_segunda" />
-    
+    <include layout="@layout/content_exercicio" />
+
 </android.support.design.widget.CoordinatorLayout>

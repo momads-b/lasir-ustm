@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ustm.lasir2017.Exercicio.ExercicioActivity"
+    tools:showIn="@layout/activity_exercicio">
+
+    <TextView
+        android:id="@+id/tvPrimeiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primeiro Numero" />
+
+    <EditText
+        android:id="@+id/etPrimeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvPrimeiro"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvSegundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPrimeiro"
+        android:text="Segundo Numero" />
+
+    <EditText
+        android:id="@+id/etSegundo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvSegundo"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSegundo"
+        android:text="Resultado" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvResultado"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btAdicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar" />
+
+        <Button
+            android:id="@+id/btSubtrair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtrair" />
+
+        <Button
+            android:id="@+id/btMultiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplicar" />
+
+        <Button
+            android:id="@+id/btDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dividir" />
+    </LinearLayout>
+</RelativeLayout>
